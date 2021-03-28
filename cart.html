@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LK - Cart</title>
+    <link rel="stylesheet" href="assets/css/header_footer.css">
+    <link rel="shortcut icon" href="./assets/logo/header--logo.png">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./js/cart.js"></script>
+</head>
+<body>
+
+    <!-- header -->
+    <div id="header">
+        <div class="header__navbar active_center">
+            <div class="header__navbar-logo ">
+               <a href="Index.html"> <img src="assets/img/logo_transparent.png" alt="logo" class="header__navbar-img"></a>
+            </div>
+            <div class="header__navbar-search">
+                <input type="text" class="header__navbar-input-search" placeholder="Tìm kiếm sản phẩm...">
+                <button class="header__navbar-search-btn" value="Tìm kiếm">
+                    <span class="header__search-btn-text">TÌM KIẾM</span>
+                </button>
+            </div>
+            <div class="header__navbar-cart">
+                <a href="cart.html">
+                <img src="assets/img/iconfinder_shopping-cart_326700.svg" alt="cart" class="header__cart-icon">
+                </a>
+            </div>
+            <div class="header__navbar-login">
+                <img src="assets/img/iconfinder_person-people-man-profile-human_3643745.svg" alt="account" class="header__account-icon">
+                <div class="header__account-login">
+                    <a href="Login.html" target="_blank" class="login">Đăng nhập</a>
+                    <a href="reg.html" target="_blank" class="login">Đăng ký</a>
+                </div>   
+            </div>
+        </div>
+        <div class="header__menu">
+            <ul class="header__menu-list active_center">
+                <li class="header__menu-list-items"> 
+                    <a href="list_item.html" target="_blank" class="header__menu-list-items-first-link">
+                    <img src="assets/img/iconfinder_menu_4092560.svg" alt="list" class="icon-list">
+                    DANH MỤC
+                    </a>
+                    <ul class="header__menu-subnav-list">
+                        <li class="header__menu-subnav-item">
+                            LAPTOP
+                            <ul class="header__subnav-first-list">
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP DELL
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link">Inspiron G3 Gaming</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link">Inspiron G5 Gaming</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link">Inspiron G7 Gaming</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP ASUS
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> TUF Gaming</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> ROG Strix G</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> ROG Strix Scar</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Zephyrus</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP ACER
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Aspire 7</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Nitro</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Predator Helios</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Predator Triton</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP MSI
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> MSI Gaming Series</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Alpha Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Bravo Series</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GF Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GL Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GP Series</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GE Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GS Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GT Series</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP LENOVO
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Ideapad Gaming</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Legion Gaming</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-subnav-item">
+                            LKGEAR PC
+                            <ul class="header__subnav-second-list"> 
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">
+                                    PC Theo Giá</a><hr class="line">
+                                    <ul class="pc__price-list">
+                                        <li><a href="" class="pc__price-list-items">PC Dưới 10 Triệu</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Từ 10 - 15 Triệu</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Từ 15 - 20 Triệu</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Từ 20 - 30 Triệu</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Trên 30 Triệu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">PC Gaming</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">PC Đồ Họa</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">PC Văn Phòng</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Branded PC</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-subnav-item">
+                            MÀN HÌNH
+                            <ul class="header__subnav-second-list">
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">
+                                    Màn Hình Theo Hãng</a><hr class="line">
+                                    <ul class="pc__price-list">
+                                        <li><a href="" class="pc__price-list-items">Màn Hình SamSung</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình ASUS</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình ACER</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình Gigabyte</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình Cooler Master</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình MSI</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Màn Hình Phổ Thông</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Màn Hình Gaming</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Màn Hình Đồ Họa</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Màn Hình Thông Minh</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="header__menu-subnav-item">LINH KIỆN
+                            <ul class="header__subnav-second-list">
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">VGA</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">CPU</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Mainboard</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">RAM</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Ổ Cứng</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">PSU-Nguồn Máy Tính</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Case-Vỏ Máy</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-subnav-item">
+                            GAMING GEAR
+                            <ul class="header__subnav-second-list">
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Chuột Chơi Game</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Bàn Phím Cơ</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Tai Nghe Chơi Game</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Tay Cầm Chơi Game</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Loa</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Webcam</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="header__menu-list-items"><a href="contact.html" target="_blank" class="header__menu-list-items-link">Liên hệ</a></li>
+                <li class="header__menu-list-items"><a href="recruitment.html" target="_blank"class="header__menu-list-items-link">Tuyển dụng</a></li>
+                <li class="header__menu-list-items"><a href="buildCase.html" target="_blank"class="header__menu-list-items-link">Xây Dựng Cấu Hình</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- container-->
+    <div id="content">
+        <div class="content__main">
+            <h2>Giỏ Hàng</h2>
+            <div class="content__main--form">
+                <table class="cart" border="1">
+                    <thead>
+                        <tr>
+                            <th class="image">Sản phẩm</th>
+                            <th class="item">Tên sản phẩm</th>
+                            <th class="qty">Số lượng</th>
+                            <th class="price">Giá tiền</th>
+                            <th class="remove">Xoá</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+								
+                        <tr class="cart__product--item">
+                            <td class="image">
+                                <div class="product_image">
+                                    <a href="">
+                                        <img src="./assets/product/sekiraX.jpg">
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="item">
+                                <a href="">
+                                    <strong>Sekira X</strong>
+                                    
+                                </a>
+                            </td>
+                            <td class="qty">
+                                <input type="number" value="1" max = "10" min = "0">
+                            </td>
+                            <td class="price">107,490,000₫</td>
+                            <td class="remove">
+                                <button><img width="30px" src="./assets/logo/delete_logo.svg" alt=""></button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="cart__product--item">
+                            <td class="image">
+                                <div class="product_image">
+                                    <a href="">
+                                        <img src="./assets/product/rtx3090.jpg">
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="item">
+                                <a href="">
+                                    <strong>RTX 3090</strong>
+                                    
+                                </a>
+                            </td>
+                            <td class="qty">
+                                <input type="number" value="1" max = "10" min = "0">
+                            </td>
+                            <td class="price">69,999,99₫</td>
+                            <td class="remove">
+                                <button><img width="30px" src="./assets/logo/delete_logo.svg" alt=""></button>
+                            </td>
+                        </tr>
+
+                        <tr class="cart__product--item">
+                            <td class="image">
+                                <div class="product_image">
+                                    <a href="">
+                                        <img src="./assets/product/msi_ge66.png">
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="item">
+                                <a href="">
+                                    <strong>MSI GE66</strong>
+                                    
+                                </a>
+                            </td>
+                            <td class="qty">
+                                <input type="number" value="1" max = "10" min = "0">
+                            </td>
+                            <td class="price">63,990,000₫</td>
+                            <td class="remove">
+                                <button><img width="30px" src="./assets/logo/delete_logo.svg" alt=""></button>
+                            </td>
+                        </tr>
+                        
+                        <tr class="cart__product--item">
+                            <td class="image">
+                                <div class="product_image">
+                                    <a href="">
+                                        <img src="./assets/product/msi_gp66.png">
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="item">
+                                <a href="">
+                                    <strong>MSI GP66</strong>
+                                    
+                                </a>
+                            </td>
+                            <td class="qty">
+                                <input type="number" value="1" max = "10" min = "0">
+                            </td>
+                            <td class="price">49,999,999₫</td>
+                            <td class="remove">
+                                <button><img width="30px" src="./assets/logo/delete_logo.svg" alt=""></button>
+                            </td>
+                        </tr>
+
+
+
+
+
+                        <!-- Sản Phẩm-->
+                        <tr class="summary" id="tong_tien">
+                            <td colspan="4" style="font-weight: bold; font-size: 20px;">Tổng tiền:</td>
+                            
+                            <td class="price">
+                                <span class="total">
+                                    <strong>107,490,000₫</strong>
+                                </span>
+                            </td>								
+                        </tr>
+
+
+                        <!-- Ghi chú -->
+                        <tr class="cartnote" id="cartnote">
+                            <td colspan="5" style="font-weight: bold; font-size: 20px;">
+                                <textarea id="note" name="note" rows="8" cols="50" placeholder="Ghi chú" style="margin: 0px;height: 70px;border-color: #6498cd;border-width: 1px; width: 92%"></textarea>
+                                
+                            </td>
+                            
+                                                
+                        </tr>
+                        <!-- Ghi chú -->
+
+                        <tr class="btn">
+                            <td colspan="5" style="font-weight: bold; font-size: 20px;">
+                                <a href="buy.html"><button class="btn__up">Thanh Toán</button></a>
+                                <button class="btn__up">Cập Nhập</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                  
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="footer__container active_center">
+            <div class="footer__container--items">
+                <h4>Thông Tin Liên Hệ</h4>
+                <ul>
+                    <li><img src="./assets/logo/adress.svg" alt=""> Đ/c: 123 Trần Duy Hưng, Hà Nội</li>
+                    <li><img src="./assets/logo/phone.svg" alt="">Hotline: 0927015206</li>
+                    <li><img src="./assets/logo/phone.svg" alt="">Hotline: 0961955201</li>
+                    <li><img src="./assets/logo/mail.svg" alt="">Email: kienteo1012@gmail.com</li>
+                    <li><img src="./assets/logo/mail.svg" alt="">Email: nduylong9501@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="footer__container--items">
+                <h4>Thời Gian Mở Cửa</h4>
+                <ul>
+                    <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+                    <li>Thứ 7: 9AM - 8PM</li>
+                </ul>
+            </div>
+            <div class="footer__container--items">
+                <h4>Hỗ Trợ Khách Hàng</h4>
+                <ul>
+                    <li><a href="">Liên Hệ, Góp Ý</a></li>
+                    <li></li>
+                    <li><a href="">Chính Sách Bảo Mật</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer__container--items">
+                <h4>Chính Sách Mua Hàng</h4>
+                <ul>
+                    <li><a href="pay.html" target="_blank">Hình Thức Thanh Toán</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            
+            <ul class="footer__contact--icon">
+                <li><a href="https://www.facebook.com/llong2195"><img src="./assets/logo/fb.svg" alt=""></a></li>
+                <li><a href=""><img src="./assets/logo/instagram.svg" alt=""></a></li>
+                <li><a href=""><img src="./assets/logo/g++.svg" alt=""></a></li>
+                
+            </ul>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

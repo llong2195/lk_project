@@ -1,0 +1,191 @@
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#container{
+    width: 100%;
+    min-height: 1500px;
+    height: auto;
+    margin: 50px auto;
+    /* border: 1px solid black; */
+}
+
+.content__main{
+    max-width: 1280px;
+    min-height: 1500px;
+    height: auto;
+    margin: auto;
+}
+.content__main > h2{
+    margin: 50px 0 20px 100px;
+}
+.content__main--left{
+    width: 30%;
+    min-height: 1500px;
+    height: auto;
+    
+    float: left;
+}
+#tong_Tien{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+    margin-right: 20px;
+}
+.content__main--right{
+    width: 69%;
+    min-height: 1500px;
+    height: auto;
+    border: 1px solid #ccc;
+    float: right;
+}
+
+.content__main--left-list-title{
+    color: rgb(255, 86, 86);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 20%;
+}
+
+.content__main--left-list > .l__btn{
+    margin-top: 50px;
+}
+.content__main--left-list > .l__btn >  .btn{
+    background-color: #e93434;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    margin: 0 11%;
+    outline: none;
+    border: none;
+}
+.content__main--left-list > .l__btn > .btn:hover{
+    background-color: rgb(252, 133, 133);
+}
+.content__main--left-list > ul {
+    margin: 0 0 30px 0;
+    border: 1px solid #ccc;
+    width: 99%;
+    height: 120px;
+    width: auto;
+    height: auto;
+}
+.content__main--left-list > ul > .content__main--left-list-item {
+    margin: 0 0 30px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 99%;
+    height: 120px;
+}
+.content__main--left-list > ul > .content__main--left-list-item > .content__main--left-list-item-l{
+    width: 120px;
+    height: 120px;
+    float: left;
+
+}
+
+.content__main--left-list > ul > .content__main--left-list-item > .content__main--left-list-item-l > img{
+    width: 100px;
+    height: 100px;
+}
+
+
+.content__main--left-list > ul > .content__main--left-list-item > .content__main--left-list-item-r{
+    width: 250px;
+    height: 100px;
+    float: right;
+    
+}
+.content__main--left-list > ul > .content__main--left-list-item > .content__main--left-list-item-r > .item-r-name{
+    height: 54px;
+}
+
+.content__main--left-list > ul > .content__main--left-list-item > .content__main--left-list-item-r > .item-r-price{
+    color: red;
+    font-size: 20px;
+}
+.content__main--left-list > ul > .content__main--left-list-item > .content__main--left-list-item-r > .item-r-del{
+    margin: 20px 20px 0 0;
+    float: right;
+}
+/* 
+
+
+*/
+
+
+.content__main > .content__main--right >ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+
+.content__main--list-item{
+    /* background-color:black; */
+    width: 285px;
+    height:450px;
+}
+.content__main--list-item:hover{
+    /* box-shadow: 4px 4px  4px 4px #ccc; */
+    cursor: pointer;
+}
+.content__main--list-item:hover .content__main--list-item-img{
+    transform:scale(1.1);
+}
+.content__main--list-item-img{
+    width: 200px;
+    margin: 40px 50px auto 50px;
+    transition: 0.5s;
+}
+.content__main--list-item-name{
+    margin: auto;
+    line-height:32px;
+    text-align:center;
+    
+}
+.content__main--list-item-link{
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+.content__main--list-item-price{
+    margin-top: 70px;
+    display: block;
+    /* justify-content: space-between; */
+    /* z-index: 1; */
+}
+.content__main--list-item-first-price{
+    color: rgb(155, 151, 151);
+    text-decoration: line-through;
+    float: left;
+    /* background-color: #efefef; */
+    margin-top: -60px;
+    margin-left: 10px;
+}
+.content__main--list-item-second-price{
+    color:  #e93434;
+    /* background-color: #e93434; */
+    /* padding: 20px; */
+    margin-left: 10px;
+    /* margin-top: 10px; */
+    font-size: 24px;
+    font-weight: 700;
+}
+.content__main--list-item-logo
+{
+    width: 120px;
+    height:120px;
+    float: right;
+    margin-top: -90px;
+}
+.content__main--list-item-link:hover{
+    color: #e93434;
+}

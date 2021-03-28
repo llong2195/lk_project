@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LK</title>
+    <link rel="stylesheet" href="./assets/css/header_footer.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="./assets/logo/header--logo.png">
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        const listItem = [
+            {
+                name:'Laptop Asus TUF FX506LI HN096T i7 10870H/8GB/512GB SSD/Win10',
+                firstPrice:'26.490.000đ',
+                secondPrice:'22.490.000đ',
+                type: 'laptop',
+                link:'Product.html',
+            },
+            {
+                name:'Laptop Acer Nitro Gaming i7 10750H/8GB/512GB/4GB/Win 10',
+                firstPrice:'26.990.000đ',
+                secondPrice:'22.990.000đ',
+                type: 'laptop',
+                link:'Product1.html',
+            },
+            {
+                name:'Lenovo IdeaPad L340-15IRH 81LK00FAVN',
+                firstPrice:'31.990.000đ',
+                secondPrice:'27.990.000đ',
+                type: 'laptop',
+                link:'Product2.html',
+            },
+            {
+                name:'Máy tính xách tay MSI Gaming GL65 Leopard 10SCXK (089VN)',
+                firstPrice:'26.690.000đ',
+                secondPrice:'22.690.000đ',
+                type: 'laptop',
+                link:'Product3.html',
+            },
+            {
+                name:'PC Gaming EAGLE 001(I9 9900K//32GB RAM/1TB SSD/RTX 2080Ti/ 850W/RGB)',
+                firstPrice:'122.990.000đ',
+                secondPrice:'113.990.000đ',
+                type: 'pc',
+            },
+            {
+                name:'PC MSI Trident X (i7-9700K/16GB (2x8GB) RAM/256GB HDD/RTX 2080)',
+                firstPrice:'64.499.000đ',
+                secondPrice:'60.499.000đ',
+                type: 'pc',
+            },
+            {
+                name:'PC Asus Gaming GS30 (i9-9900/64GB RAM(16*4)/256GB HDD/RTX2080)',
+                firstPrice:'85.690.000 đ ',
+                secondPrice:'80.690.000đ',
+                type: 'pc',
+            },
+            {
+                name:'PC Gaming Aorus 001(i9 10850K/32GBRAM/512GBSSD/RTX3080)',
+                firstPrice:'99.999.000 đ',
+                secondPrice:'95.999.000 đ ',
+                type: 'pc',
+            },
+            {
+                name:'Chuột Gaming không dây ASUS ROG Pugio II RGB',
+                firstPrice:'2.990.000',
+                secondPrice:'2.490.000 đ ',
+                type: 'gaming-gear',
+            },
+            {
+                name:'Màn hình cong Samsung LC49J890 49″ DFHD 144Hz USB-C',
+                firstPrice:'47.888.000 đ',
+                secondPrice:'24.499.000 đ ',
+                type: 'gaming-gear',
+            },
+            {
+                name:'Bàn phím cơ Logitech G610 Orion Blue Backlit Gaming',
+                firstPrice:'2.990.000 đ',
+                secondPrice:'1.799.000 đ ',
+                type: 'gaming-gear',
+            },
+            {
+                name:'Tai Nghe Asus ROG Delta Usb-C Hi-Res Audio Gaming Headset',
+                firstPrice:'5.190.000 đ',
+                secondPrice:'4.699.000 đ ',
+                type: 'gaming-gear',
+            },
+        ]
+        $(document).ready(function () {
+            var ls=$('.container__hotdeal-list')
+            ls.empty();
+            for(var i=0;i<listItem.length;i++){
+                if(listItem[i].type=="laptop")
+                {
+                    var node = `<li class="container__hotdeal-list-item">
+                    <a href='${listItem[i].link}'>
+                    <div >
+                        <img src="assets/product/header-product${i+1}.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                    </div>
+                    <div class="container__hotdeal-list-item-name">
+                        <a href="${listItem[i].link}" class="container__hotdeal-list-item-link">
+                            ${listItem[i].name}
+                        </a>
+                    </div>
+                    <div class="container__hotdeal-list-item-price">
+                        
+                        <span class="container__hotdeal-list-item-second-price">
+                            ${listItem[i].secondPrice}
+                        </span>
+                        <span class="container__hotdeal-list-item-first-price">
+                            ${listItem[i].firstPrice}
+                        </span>
+                    </div>
+                    <span >
+                        <img src="assets/img/hotdeal${i+1}.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                    </span>
+                    </a>
+                    </li>`
+                    ls.append(node);
+                }
+            }
+            $('.container__hotdeal-option').click(function () {
+                    $('.container__hotdeal-option').css({'background-color': '#ccc', 'color':'black'});
+                    $(this).css({'background-color':'#e93434','color':'white'});
+                    var ls=$('.container__hotdeal-list')
+                    console.log(this.id)
+                    ls.empty();
+                    for(var i=0;i<listItem.length;i++){
+                        if(listItem[i].type == this.id)
+                        {
+                        console.log(this.id + " " + listItem[i].type )
+                        var node = `<li class="container__hotdeal-list-item">
+                        <a href="${listItem[i].link}">
+                        <div >
+                            <img src="assets/product/header-product${i+1}.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                        </div>
+                        <div class="container__hotdeal-list-item-name">
+                            <a href="${listItem[i].link}" class="container__hotdeal-list-item-link">
+                                ${listItem[i].name}
+                            </a>
+                        </div>
+                        <div class="container__hotdeal-list-item-price">
+                            
+                        <span class="container__hotdeal-list-item-second-price">
+                            ${listItem[i].secondPrice}
+                        </span>
+                        <span class="container__hotdeal-list-item-first-price">
+                            ${listItem[i].firstPrice}
+                        </span>
+                    </div>
+                    <span >
+                        <img src="assets/img/hotdeal${i+1}.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                    </span>
+                    </a>
+                </li>`
+                ls.append(node);
+                }
+            }
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <!-- header -->
+    <div id="header">
+        <div class="header__navbar active_center">
+            <div class="header__navbar-logo ">
+               <a href="Index.html"> <img src="assets/img/logo_transparent.png" alt="logo" class="header__navbar-img"></a>
+            </div>
+            <div class="header__navbar-search">
+                <input type="text" class="header__navbar-input-search" placeholder="Tìm kiếm sản phẩm...">
+                <button class="header__navbar-search-btn" value="Tìm kiếm">
+                    <span class="header__search-btn-text">TÌM KIẾM</span>
+                </button>
+            </div>
+            <div class="header__navbar-cart">
+                <a href="cart.html" target="_blank">
+                <img src="assets/img/iconfinder_shopping-cart_326700.svg" alt="cart" class="header__cart-icon">
+                </a>
+            </div>
+            <div class="header__navbar-login">
+                <img src="assets/img/iconfinder_person-people-man-profile-human_3643745.svg" alt="account" class="header__account-icon">
+                <div class="header__account-login">
+                    <a href="Login.html" target="_blank" class="login">Đăng nhập</a>
+                    <a href="reg.html" target="_blank" class="login">Đăng ký</a>
+                </div>   
+            </div>
+        </div>
+        <div class="header__menu">
+            <ul class="header__menu-list active_center">
+                <li class="header__menu-list-items"> 
+                    <a href="list_item.html" target="_blank" class="header__menu-list-items-first-link">
+                    <img src="assets/img/iconfinder_menu_4092560.svg" alt="list" class="icon-list">
+                        DANH MỤC
+                    </a>
+                    
+                    <ul class="header__menu-subnav-list">
+                        <li class="header__menu-subnav-item">
+                            LAPTOP
+                            <ul class="header__subnav-first-list">
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP DELL
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link">Inspiron G3 Gaming</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link">Inspiron G5 Gaming</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link">Inspiron G7 Gaming</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP ASUS
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> TUF Gaming</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> ROG Strix G</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> ROG Strix Scar</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Zephyrus</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP ACER
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Aspire 7</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Nitro</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Predator Helios</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Predator Triton</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP MSI
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> MSI Gaming Series</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Alpha Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Bravo Series</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GF Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GL Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GP Series</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GE Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GS Series</a></li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> GT Series</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__subnav-first-list-items">
+                                    LAPTOP LENOVO
+                                    <hr>
+                                    <ul class="laptop-list">
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Ideapad Gaming</a></a</li>
+                                        <li class="laptop-list-item"><a href="" class="laptop-list-item-link"> Legion Gaming</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-subnav-item">
+                            LKGEAR PC
+                            <ul class="header__subnav-second-list"> 
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">
+                                    PC Theo Giá</a><hr class="line">
+                                    <ul class="pc__price-list">
+                                        <li><a href="" class="pc__price-list-items">PC Dưới 10 Triệu</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Từ 10 - 15 Triệu</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Từ 15 - 20 Triệu</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Từ 20 - 30 Triệu</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Trên 30 Triệu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">PC Gaming</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">PC Đồ Họa</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">PC Văn Phòng</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Branded PC</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-subnav-item">
+                            MÀN HÌNH
+                            <ul class="header__subnav-second-list">
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">
+                                    Màn Hình Theo Hãng</a><hr class="line">
+                                    <ul class="pc__price-list">
+                                        <li><a href="" class="pc__price-list-items">Màn Hình SamSung</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình ASUS</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình ACER</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình Gigabyte</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình Cooler Master</a><hr class="list__line"></li>
+                                        <li><a href="" class="pc__price-list-items">Màn Hình MSI</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Màn Hình Phổ Thông</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Màn Hình Gaming</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Màn Hình Đồ Họa</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Màn Hình Thông Minh</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="header__menu-subnav-item">LINH KIỆN
+                            <ul class="header__subnav-second-list">
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">VGA</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">CPU</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Mainboard</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">RAM</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Ổ Cứng</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">PSU-Nguồn Máy Tính</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Case-Vỏ Máy</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-subnav-item">
+                            GAMING GEAR
+                            <ul class="header__subnav-second-list">
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Chuột Chơi Game</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Bàn Phím Cơ</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Tai Nghe Chơi Game</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Tay Cầm Chơi Game</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Loa</a><hr class="line"></li>
+                                <li class="header__subnav-second-list-items"><a href="" class="header__subnav-second-list-items-link">Webcam</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="header__menu-list-items"><a href="contact.html" target="_blank" class="header__menu-list-items-link">Liên hệ</a></li>
+                <li class="header__menu-list-items"><a href="recruitment.html" target="_blank"class="header__menu-list-items-link">Tuyển dụng</a></li>
+                <li class="header__menu-list-items"><a href="buildCase.html" target="_blank"class="header__menu-list-items-link">Xây Dựng Cấu Hình</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div id="container">
+        <div class="container__slide">
+            <div class="container__slide-wrapper">
+                <div class="slide"><img src="./assets/img/slideshow_4.webp" alt="slide1" class="slide"></div>
+                <div class="slide"><img src="./assets/img/nitro-5-ksp-2-l.jpg" alt="slide2" class="slide"></div>
+                <div class="slide"><img src="./assets/img/slider3.jpg" alt="slide3" class="slide"></div>
+            </div>
+         </div>
+         <div class="container__image">
+             <img src="https://storage-asset.msi.com/global/picture/article/article_16009243955f6c2aeb2f2c8.jpg" alt="img 1" class="container__image-items">
+             <img src="https://lh3.googleusercontent.com/ChadLdzlsmMfB1ycnVM0xDyLvijU3XWKvSjMq9JjT31yiN_m0uy65uOJZ2Nl0Xl2OQl12t8j1Elp1l_zW5r7-y6HG3Zxbxs=w308-rw" alt="img 1" class="container__image-items">
+             <img src="https://lh3.googleusercontent.com/suLMZ7gU_bCkO_K9p80NXHtzyXuyMFQ19-mW6FYLvTZseXNJaiauAQNdYJg1Cg_lkokrYCcnztn5ByY5hyLaKF0Kjk0g6Be-ug=w308-rw" alt="img 1" class="container__image-items">
+         </div>
+    </div>
+    <div class="container__hotdeal">
+        <div class="container__hotdeal-header">
+            <div class="container__hotdeal-header-text">
+                HOT DEAL
+            </div>
+        </div>
+        <div class="container__hotdeal-selection">
+            <button class="container__hotdeal-option" id="laptop">
+                Laptop gaming
+            </button>
+            <button class="container__hotdeal-option" id="pc">
+                PC gaming
+            </button>
+            <button class="container__hotdeal-option" id="gaming-gear">
+                Gaming Gear
+            </button>
+        </div>
+        <div class="container__hotdeal-main">
+            <ul class="container__hotdeal-list">
+                <li class="container__hotdeal-list-item">
+                        <a href="">
+                        <div>
+                            <img src="assets/img/header-product1.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                        </div>
+                        </a><div class="container__hotdeal-list-item-name">
+                            <a href="" class="container__hotdeal-list-item-link">
+                                Laptop Asus TUF FX506LI HN096T i7 10870H/8GB/512GB SSD/Win10
+                            </a>
+                        </div>
+                        <div class="container__hotdeal-list-item-price">
+                            
+                        <span class="container__hotdeal-list-item-second-price">
+                            22.490.000đ
+                        </span>
+                        <span class="container__hotdeal-list-item-first-price">
+                            26.490.000đ
+                        </span>
+                    </div>
+                    <span>
+                        <img src="assets/img/hotdeal1.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                    </span>
+                    
+                </li>
+                <li class="container__hotdeal-list-item">
+                        <a href="">
+                        <div>
+                            <img src="assets/img/header-product2.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                        </div>
+                        </a><div class="container__hotdeal-list-item-name">
+                            <a href="" class="container__hotdeal-list-item-link">
+                                Laptop Acer Nitro Gaming i7 10750H/8GB/512GB/4GB/Win 10
+                            </a>
+                        </div>
+                        <div class="container__hotdeal-list-item-price">
+                            
+                        <span class="container__hotdeal-list-item-second-price">
+                            22.990.000đ
+                        </span>
+                        <span class="container__hotdeal-list-item-first-price">
+                            26.990.000đ
+                        </span>
+                    </div>
+                    <span>
+                        <img src="assets/img/hotdeal2.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                    </span>
+                    
+                </li>
+                <li class="container__hotdeal-list-item">
+                        <a href="">
+                        <div>
+                            <img src="assets/img/header-product3.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                        </div>
+                        </a><div class="container__hotdeal-list-item-name">
+                            <a href="" class="container__hotdeal-list-item-link">
+                                Lenovo IdeaPad L340-15IRH 81LK00FAVN
+                            </a>
+                        </div>
+                        <div class="container__hotdeal-list-item-price">
+                            
+                        <span class="container__hotdeal-list-item-second-price">
+                            27.990.000đ
+                        </span>
+                        <span class="container__hotdeal-list-item-first-price">
+                            31.990.000đ
+                        </span>
+                    </div>
+                    <span>
+                        <img src="assets/img/hotdeal3.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                    </span>
+                    
+                </li><li class="container__hotdeal-list-item">
+                        <a href="">
+                        <div>
+                            <img src="assets/img/header-product4.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                        </div>
+                        </a><div class="container__hotdeal-list-item-name">
+                            <a href="" class="container__hotdeal-list-item-link">
+                                Máy tính xách tay MSI Gaming GL65 Leopard 10SCXK (089VN)
+                            </a>
+                        </div>
+                        <div class="container__hotdeal-list-item-price">
+                            
+                        <span class="container__hotdeal-list-item-second-price">
+                            22.690.000đ
+                        </span>
+                        <span class="container__hotdeal-list-item-first-price">
+                            26.690.000đ
+                        </span>
+                    </div>
+                    <span>
+                        <img src="assets/img/hotdeal4.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                    </span>
+                    
+                </li>
+                <li class="container__hotdeal-list-item">
+                    <a href="">
+                    <div>
+                        <img src="assets/img/header-product4.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                    </div>
+                    </a><div class="container__hotdeal-list-item-name">
+                        <a href="" class="container__hotdeal-list-item-link">
+                            Máy tính xách tay MSI Gaming GL65 Leopard 10SCXK (089VN)
+                        </a>
+                    </div>
+                    <div class="container__hotdeal-list-item-price">   
+                        <span class="container__hotdeal-list-item-second-price">
+                            22.690.000đ
+                        </span>
+                        <span class="container__hotdeal-list-item-first-price">
+                            26.690.000đ
+                        </span>
+                    </div>
+                    <span>
+                        <img src="assets/img/hotdeal4.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                    </span>
+                </li>
+                <li class="container__hotdeal-list-item">
+                    <a href="">
+                    <div>
+                        <img src="assets/img/header-product4.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                    </div>
+                    </a>
+                    <div class="container__hotdeal-list-item-name">
+                        <a href="" class="container__hotdeal-list-item-link">
+                            Máy tính xách tay MSI Gaming GL65 Leopard 10SCXK (089VN)
+                        </a>
+                    </div>
+                    <div class="container__hotdeal-list-item-price">  
+                    <span class="container__hotdeal-list-item-second-price">
+                        22.690.000đ
+                    </span>
+                    <span class="container__hotdeal-list-item-first-price">
+                        26.690.000đ
+                    </span>
+                </div>
+                <span>
+                    <img src="assets/img/hotdeal4.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                </span>
+            </li>
+            <li class="container__hotdeal-list-item">
+                <a href="">
+                <div>
+                    <img src="assets/img/header-product4.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                </div>
+                </a>
+                <div class="container__hotdeal-list-item-name">
+                    <a href="" class="container__hotdeal-list-item-link">
+                        Máy tính xách tay MSI Gaming GL65 Leopard 10SCXK (089VN)
+                    </a>
+                </div>
+                <div class="container__hotdeal-list-item-price"> 
+                    <span class="container__hotdeal-list-item-second-price">
+                        22.690.000đ
+                    </span>
+                    <span class="container__hotdeal-list-item-first-price">
+                        26.690.000đ
+                    </span>
+                </div>
+                <span>
+                    <img src="assets/img/hotdeal4.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                </span>
+            </li>
+            <li class="container__hotdeal-list-item">
+                <a href="">
+                <div>
+                    <img src="assets/img/header-product4.jpg" alt="laptop" class="container__hotdeal-list-item-img">
+                </div>
+                </a>
+                    <div class="container__hotdeal-list-item-name">
+                <a href="" class="container__hotdeal-list-item-link">
+                        Máy tính xách tay MSI Gaming GL65 Leopard 10SCXK (089VN)
+                    </a>
+                </div>
+                <div class="container__hotdeal-list-item-price">
+                    <span class="container__hotdeal-list-item-second-price">
+                    22.690.000đ
+                    </span>
+                    <span class="container__hotdeal-list-item-first-price">
+                    26.690.000đ
+                    </span>
+                </div>
+                <span>
+                    <img src="assets/img/hotdeal4.png" alt="hotdeal" class="container__hotdeal-list-item-logo">
+                </span>  
+            </li>
+        </ul>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <div class="footer__container active_center">
+            <div class="footer__container--items">
+                <h4>Thông Tin Liên Hệ</h4>
+                <ul>
+                    <li><img src="./assets/logo/adress.svg" alt=""> Đ/c: 123 Trần Duy Hưng, Hà Nội</li>
+                    <li><img src="./assets/logo/phone.svg" alt="">Hotline: 0927015206</li>
+                    <li><img src="./assets/logo/phone.svg" alt="">Hotline: 0961955201</li>
+                    <li><img src="./assets/logo/mail.svg" alt="">Email: kienteo1012@gmail.com</li>
+                    <li><img src="./assets/logo/mail.svg" alt="">Email: nduylong9501@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="footer__container--items">
+                <h4>Thời Gian Mở Cửa</h4>
+                <ul>
+                    <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+                    <li>Thứ 7: 9AM - 8PM</li>
+                </ul>
+            </div>
+            <div class="footer__container--items">
+                <h4>Hỗ Trợ Khách Hàng</h4>
+                <ul>
+                    <li><a href="">Liên Hệ, Góp Ý</a></li>
+                    <li></li>
+                    <li><a href="">Chính Sách Bảo Mật</a></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="footer__container--items">
+                <h4>Chính Sách Mua Hàng</h4>
+                <ul>
+                    <li><a href="pay.html" target="_blank">Hình Thức Thanh Toán</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            
+            <ul class="footer__contact--icon">
+                <li><a href=""><img src="./assets/logo/fb.svg" alt=""></a></li>
+                <li><a href=""><img src="./assets/logo/instagram.svg" alt=""></a></li>
+                <li><a href=""><img src="./assets/logo/g++.svg" alt=""></a></li>
+                
+            </ul>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

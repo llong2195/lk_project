@@ -1,0 +1,192 @@
+
+*{
+    width: 100%;
+}
+/* container */
+#container{
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+}
+.container__slide{
+    overflow: hidden;
+   height: 867px;
+   width: 1280px;
+   margin: 0 auto;
+   border-radius: 20px;
+}
+.container__slide-wrapper{
+    width: 4000px;
+    animation: slide 14s ease infinite;
+    border-radius: 20px;
+}
+.slide {
+    float: left;
+   height: 600px;
+   width: 1280px;
+   border-radius: 20px;
+}
+/* .slide:hover{
+    cursor: pointer; */
+    /* opacity: 0.98;
+} */
+@keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -1280px;}
+    50% {margin-left: -1280px;}
+    60% {margin-left: -2560px;}
+    90% {margin-left: -2560px;}
+  }
+.container__image{
+    display: flex;
+    width: 1280px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: -240px;
+}
+.container__image-items{
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    transition: 0.5s;
+    /* box-shadow:  3px 5px #e93434; */
+}
+.container__image-items:hover{
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+.container__hotdeal{
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.container__hotdeal-header{
+    background-color: #e93434;
+    height: 60px;
+    color : #ffff;
+    font-size: 32px;
+    display: inline-block;
+    position: relative;
+}
+.container__hotdeal-header:after{
+    content: "";
+    border-style:  solid;
+    border-width: 28px 28px;
+    border-color:transparent white transparent transparent ;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    color:black;
+}
+.container__hotdeal-header::before{
+    content: "";
+    border-style:  solid;
+    border-width: 28px 28px;
+    border-color:transparent transparent transparent white ;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color:black;
+}
+.container__hotdeal-header-text{
+    margin-top:12px;
+    margin-left: 50px;
+    font-weight: 700;
+}
+.container__hotdeal-main{
+
+}
+.container__hotdeal-selection{
+    display:flex;
+    justify-content:flex-start;
+    margin-top:60px;
+    width:340px;
+    border:1px solid #ccc; 
+    /* background-color:#e93434; */
+    /* height:30px; */
+}
+.container__hotdeal-option:first-child{
+    background-color:#e93434;
+    color:white;
+}
+.container__hotdeal-option{
+   padding:10px;
+   color:#ffff;
+   border-left: 1px solid black;
+   /* background-color: #e93434 ; */
+   /* width: 100px; */
+   /* height:60px; */
+   border: none;
+   border-right:1px solid #ccc;
+   outline: 1px solid #ccc;
+   color: black;
+   background-color: #ccc;
+}
+.container__hotdeal-list{
+    list-style: none;
+    display:flex;
+    justify-content:space-between;
+    margin-top:50px;
+}
+.container__hotdeal-list-item{
+    /* background-color:black; */
+    width: 300px;
+    height:450px;
+}
+.container__hotdeal-list-item:hover{
+    /* box-shadow: 4px 4px  4px 4px #ccc; */
+    cursor: pointer;
+}
+.container__hotdeal-list-item:hover .container__hotdeal-list-item-img{
+    transform:scale(1.1);
+}
+.container__hotdeal-list-item-img{
+    width: 200px;
+    margin: 40px 50px auto 50px;
+    transition: 0.5s;
+}
+.container__hotdeal-list-item-name{
+    margin: auto;
+    line-height:32px;
+    text-align:center;
+    
+}
+.container__hotdeal-list-item-link{
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+.container__hotdeal-list-item-price{
+    margin-top: 70px;
+    display: block;
+    /* justify-content: space-between; */
+    /* z-index: 1; */
+}
+.container__hotdeal-list-item-first-price{
+    color: rgb(155, 151, 151);
+    text-decoration: line-through;
+    float: left;
+    /* background-color: #efefef; */
+    margin-top: -60px;
+    margin-left: 10px;
+}
+.container__hotdeal-list-item-second-price{
+    color:  #e93434;
+    /* background-color: #e93434; */
+    /* padding: 20px; */
+    margin-left: 10px;
+    /* margin-top: 10px; */
+    font-size: 24px;
+    font-weight: 700;
+}
+.container__hotdeal-list-item-logo
+{
+    width: 120px;
+    height:120px;
+    float: right;
+    margin-top: -90px;
+}
+.container__hotdeal-list-item-link:hover{
+    color: #e93434;
+}
+
