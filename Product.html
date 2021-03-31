@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/product.css">
     <link rel="shortcut icon"  href="assets/img/logo_header.png"/>
     <script src="./jquery-3.6.0.js"></script>
+    <script src="./js/product_add.js"></script>
     <script>
         
         $(document).ready(function(){
@@ -223,16 +224,18 @@
                 </ul>
             </div>
             <div class="container__des-price">
+                
                 <span class="container__des-firstPrice">
                     26.990.000 đ
                 </div>
                 <span class="container__des-secondPrice">
                     22.990.000 đ
                 </span>
+                
             </div>
             <span class="container__des-btn">
-                <a href="">
-                    <input type="button" class="product-btn" value="Thêm vào giỏ hàng"></button>
+                <a href="./cart.html">
+                    <input type="button" id="prd01" class="product-btn" onclick="ad_pr_cart(this.id)" value="Thêm vào giỏ hàng"></button>
                 </a>
             </span>
         </div>

@@ -41,14 +41,16 @@ a{
     height: 100px;
 }
 
-#content > .content__main > .content__main--form > .cart > tbody > .btn > td > button{
+#content > .content__main > .content__main--form > .cart > tbody > .btn > td > button,
+#content > .content__main > .content__main--form > .cart > tbody > .btn > td > a > button{
    background-color: #e93434;
    width: 100px;
    height: 40px;
    color: #fff;
    margin: 0 20px;
 }
-#content > .content__main > .content__main--form > .cart > tbody > .btn > td > button:hover{
+#content > .content__main > .content__main--form > .cart > tbody > .btn > td > button:hover,
+#content > .content__main > .content__main--form > .cart > tbody > .btn > td > a > button:hover{
     background-color: rgb(252, 133, 133);
 }
 

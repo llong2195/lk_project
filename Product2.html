@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/product.css">
     <link rel="shortcut icon"  href="assets/img/logo_header.png"/>
     <script src="./jquery-3.6.0.js"></script>
+    <script src="./js/product_add.js"></script>
     <script>
         
         $(document).ready(function(){
@@ -231,8 +232,8 @@
                 </span>
             </div>
             <span class="container__des-btn">
-                <a href="">
-                    <input type="button" class="product-btn" value="Thêm vào giỏ hàng"></button>
+                <a href="./cart.html">
+                    <input type="button" id="prd03" class="product-btn" onclick="ad_pr_cart(this.id)" value="Thêm vào giỏ hàng"></button>
                 </a>
             </span>
         </div>
